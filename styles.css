@@ -209,10 +209,6 @@ footer {
     gap: 16px;
   }
 
-  nav a:nth-child(3) {
-    display: none;
-  }
-
   .hero img {
     min-height: 52vh;
     max-height: 68vh;
@@ -470,14 +466,20 @@ nav a[aria-current="page"] {
 }
 
 
-/* v1.0.1 — narrow portrait navigation fix */
-@media (max-width: 560px) {
+
+
+
+/* v1.0.3 — clean mobile navigation */
+@media (max-width: 760px) {
   .site-header {
-    gap: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .site-header .wordmark {
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     min-width: 0;
     font-size: 15px;
     letter-spacing: -0.02em;
@@ -488,18 +490,19 @@ nav a[aria-current="page"] {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 12px;
     white-space: nowrap;
   }
 
   .site-header nav a {
+    display: inline-block;
     font-size: 13px;
   }
 }
 
 @media (max-width: 390px) {
   .site-header {
-    gap: 10px;
+    gap: 8px;
   }
 
   .site-header .wordmark {
@@ -507,18 +510,10 @@ nav a[aria-current="page"] {
   }
 
   .site-header nav {
-    gap: 9px;
+    gap: 8px;
   }
 
   .site-header nav a {
     font-size: 12px;
-  }
-}
-
-
-/* v1.0.2 — restore Contact on mobile */
-@media (max-width: 760px) {
-  .site-header nav a:nth-child(3) {
-    display: inline;
   }
 }
