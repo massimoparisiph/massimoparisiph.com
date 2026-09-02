@@ -468,3 +468,49 @@ nav a[aria-current="page"] {
     font-size: clamp(54px, 15vw, 82px);
   }
 }
+
+
+/* v1.0.1 — narrow portrait navigation fix */
+@media (max-width: 560px) {
+  .site-header {
+    gap: 14px;
+  }
+
+  .site-header .wordmark {
+    flex: 0 1 auto;
+    min-width: 0;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .site-header nav {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    white-space: nowrap;
+  }
+
+  .site-header nav a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 390px) {
+  .site-header {
+    gap: 10px;
+  }
+
+  .site-header .wordmark {
+    font-size: 14px;
+  }
+
+  .site-header nav {
+    gap: 9px;
+  }
+
+  .site-header nav a {
+    font-size: 12px;
+  }
+}
