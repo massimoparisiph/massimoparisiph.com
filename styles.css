@@ -514,3 +514,11 @@ nav a[aria-current="page"] {
     font-size: 12px;
   }
 }
+
+
+/* v1.0.2 — restore Contact on mobile */
+@media (max-width: 760px) {
+  .site-header nav a:nth-child(3) {
+    display: inline;
+  }
+}
